@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api/webhooks", async (req, res) => {
-  const targetUrl = 'https://discord.com${req.originalUrl}';
+  const targetUrl = `https://discord.com${req.originalUrl}`;
 
   try {
     const discordRes = await fetch(targetUrl, {
